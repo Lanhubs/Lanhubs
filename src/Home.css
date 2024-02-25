@@ -1,0 +1,96 @@
+
+.profilePic{
+  background-image: url("./assets/me.png");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+  background-color: rgba(0, 0, 0, 0.35);
+
+
+}
+.myImg{
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
+}
+.skillsGrid{
+  grid-template-rows: 1 1 ;
+}
+
+/* custom timeline component */
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 0;
+    position: relative;
+  }
+
+  .timeline:before {
+    content: "";
+    flex: 0 0 2px;
+    height: 100%;
+    background-color: #ddd;
+    position: absolute;
+    left: 50%;
+    top: 0;
+  }
+
+  .timeline_item {
+    display: flex;
+    padding: 16px 32px;
+    position: relative;
+    flex-direction: column;
+    margin-left: 50px;
+  }
+
+  .timeline_item:before {
+    content: "";
+    flex: 0 0 10px;
+    height: 10px;
+    width: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    position: absolute;
+    left: -5px;
+    top: calc(50% - 5px);
+  }
+  .timeline_item::after{
+    content: "";
+    flex: 0 0 10px;
+    height: 70px;
+    width: 3px;
+    background-color: #ddd;
+    position: absolute;
+    left: -2px;
+    top: calc(50% + 12px);
+  }
+  .timeline_item_title {
+    margin-top: 8px;
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  .timeline_item_description {
+    margin-top: 8px;
+    
+    font-size: 14px;
+    color: #777;
+  }
+
+
+  .trapezium{
+    color: #f3f3f3;
+    background-color: rgba(255, 255, 255, 0.5);
+   
+  }
+
+.aboutMe{
+  text-align: left;
+}
+
+  @media only screen and (max-width: 600px){
+    .aboutMe{
+      text-align: center;
+    }
+    
+  }
