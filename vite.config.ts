@@ -4,4 +4,5 @@ import cssModule from './css-module-watcher'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), cssModule()],
+  base: "/"
 })
