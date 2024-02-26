@@ -34,7 +34,7 @@ const GithubDetails = () => {
           <Loader type="spin" />
         </Box>
       ) : (
-        <Stack flexDir="column" gap="1rem">
+        <Stack flexDir="column" gap="1rem" overflowX={"scroll"}>
           <Heading>Github Details</Heading>
           <HStack as={Link} to="https://github.com/Lanhubs">
             {/* <Avatar src={userData ? userData?.avatar_url: ""} as={Image} /> */}

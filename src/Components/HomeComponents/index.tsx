@@ -15,7 +15,7 @@ import {
 import {Link} from "react-router-dom";
 import { contactLinks, skills } from "../data";
 import { FaArrowRight } from "react-icons/fa";
-
+import myImg from "../../assets/me.png"
 
 const Details = ():React.ReactNode => {
   return (
@@ -30,10 +30,12 @@ const Details = ():React.ReactNode => {
       <VStack
         as="div"
         className={"profilePic"}
+        backgroundImage={myImg}
         backgroundSize="cover"
         marginTop={{ base: "15%", md: 0 }}
         width={{ base: "100%", md: "35%" }}
         height={{ base: "400px", md: "100%" }}
+
       >
         <Flex
           height="25%"
@@ -41,6 +43,7 @@ const Details = ():React.ReactNode => {
           marginBottom="0"
           as="div"
           className={"myImg"}
+        
           // py="1rem"
           flexDir="column"
           gap="0.7rem"
@@ -98,7 +101,7 @@ const Details = ():React.ReactNode => {
       <Stack
         as="div"
         className={"aboutMe"}
-        py="5%"
+        py="7%"
         alignItems={{ base: "center", md: "" }}
         flex={1}
         height="100%"
@@ -108,7 +111,7 @@ const Details = ():React.ReactNode => {
           about me
         </Heading>
         <Text color="whiteAlpha.600" w="90%">
-          Prolific full stack MERN Stack web developer with a passion for
+          Prolific Full Stack (MERN Stack)  developer with a passion for
           beating my &quot;past-bests&quot;. Improving My Services by building
           challenging web applications using challenging but helpful web
           technogies. Always looking for the best technologies to adopt upon

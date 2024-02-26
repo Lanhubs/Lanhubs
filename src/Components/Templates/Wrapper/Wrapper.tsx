@@ -20,6 +20,7 @@ import {
 } from "react-icons/ai";
 import { HiBars3, HiDevicePhoneMobile } from "react-icons/hi2";
 import { Outlet, useLocation, Link } from "react-router-dom";
+import ResumeModal from "../../Utils/ResumeModal";
 interface Props {
   children: React.ReactNode;
 }
@@ -28,11 +29,16 @@ const RootTemplate = (): React.ReactNode => {
   return (
     <>
       <SideShortCut />
-      <Box w="100vw" height={{ base: "100%", md: "100vh" }} background="#000" marginLeft={0}>
+      <Box
+        w="100vw"
+        height={{ base: "100%", md: "100vh" }}
+        background="#000"
+        marginLeft={0}
+      >
         <Header />
         {/* main container */}
         <Box ml={{ base: 0, md: 0 }} bg="rgba(0, 0, 0)">
-          <Outlet/>
+          <Outlet />
         </Box>
       </Box>
     </>
@@ -54,7 +60,6 @@ const Header = () => {
       height="70px"
       display={flex}
       alignItems="center"
-      
       gap="1rem"
       position={"absolute"}
       p="1rem"
@@ -88,6 +93,7 @@ const Header = () => {
           </Box>
         ))}
       </Box>
+      
     </Box>
   );
 };
@@ -191,6 +197,7 @@ const SideShortCut = () => {
           </Tooltip>
         ))}
       </Box>
+
       <DownloadResumeBtn />
     </Box>
   );
@@ -198,24 +205,25 @@ const SideShortCut = () => {
 const DownloadResumeBtn = () => {
   return (
     <Tooltip hasArrow={true} placement="right-end" label="download resume">
-      <Box
-        alignSelf="flex-end"
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        justifySelf="flex-end"
-        color="green.500"
-        fontSize={40}
-        cursor="pointer"
-        marginTop="auto"
-        mx="auto"
-        as={Link}
-        // to="https://drive.google.com/file/d/1hMyvrsp7WokC67FIzz0HoDEkEdAAzQfE/view?usp=sharing"
-        to="https://drive.google.com/file/d/1hMyvrsp7WokC67FIzz0HoDEkEdAAzQfE/view"
-       
-      >
-        {downloadIcon}
-      </Box>
+      <ResumeModal>
+        <Box
+          alignSelf="flex-end"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          justifySelf="flex-end"
+          color="green.500"
+          fontSize={40}
+          cursor="pointer"
+          marginTop="auto"
+          mx="auto"
+          
+          // as={Link}
+          // to="https://drive.google.com/file/d/1hMyvrsp7WokC67FIzz0HoDEkEdAAzQfE/view"
+        >
+          {downloadIcon}
+        </Box>
+      </ResumeModal>
     </Tooltip>
   );
 };

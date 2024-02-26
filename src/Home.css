@@ -5,8 +5,6 @@
   background-size: cover;
   background-blend-mode: soft-light;
   background-color: rgba(0, 0, 0, 0.35);
-
-
 }
 .myImg{
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));

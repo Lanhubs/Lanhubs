@@ -1,5 +1,4 @@
 import {
-
   AiOutlineTwitter,
   AiOutlineGithub,
   AiOutlineWhatsApp,
@@ -37,7 +36,7 @@ const contactLinks = [
     name: "twitter",
   },
   {
-    icon: <AiFillFacebook/>,
+    icon: <AiFillFacebook />,
     name: "facebook",
     link: "https://www.facebook.com/habeeb.muhammad.758/",
   },
@@ -53,14 +52,15 @@ const skills = [
   },
   {
     icon: <AiOutlineAndroid />,
-    about: "Creating cross-platform and fully customized Mobile applications in React Native",
+    about:
+      "Creating cross-platform and fully customized Mobile applications in React Native",
     skill: "Mobile app development",
   },
   {
     icon: <AiOutlineCloudServer />,
     about:
-      "Making backend APIs for both web applications and Mobile applications",
-    skill: "backend development",
+      "Making backend APIs for both web applications and Mobile applications or any other sort of solution",
+    skill: "Backend development",
   },
   {
     icon: <AiOutlineDesktop />,
