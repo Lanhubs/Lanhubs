@@ -13,7 +13,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import { Link, NavLink, Path, useNavigate } from "react-router-dom";
+import { Link, NavLink, Path } from "react-router-dom";
 
 import ccbnaijaImg from "../../assets/ccbnaija.png";
 import topupcliqImg from "../../assets/topupcliq.png";
@@ -55,7 +55,7 @@ const projects = [
   {
     projName: "CCBNAIJA",
     companyName: "Codesquad LLC",
-    image: ccbnaijaImg,
+    image: ccbnaijaImg, 
     link: "https://ccbnaija.com",
     companyLogo: codesquad,
     description: "",
@@ -174,7 +174,6 @@ export default index;
 
 const ProjectDetailsModal = (props: modalProps): React.ReactElement => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const navigate = useNavigate();
   return (
     <>
       <span onClick={onOpen}>{props.children}</span>
