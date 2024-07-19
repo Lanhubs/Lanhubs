@@ -15,8 +15,6 @@ const router = createBrowserRouter(
       <Route path='/resume' element={<Resume/>} />
       <Route path='/projects' element={<Projects/>} />
       <Route path='/contact' element={<Contacts/>} />
-
-
     </Route>))
 
 const Router =(): React.ReactNode=>  <RouterProvider router={router} />

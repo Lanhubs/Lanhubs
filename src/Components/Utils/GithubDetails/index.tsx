@@ -23,6 +23,7 @@ const GithubDetails = () => {
       justifyContent={loading ? "center" : ""}
       width="100%"
       flex={1}
+      overflowX={"scroll"}
     >
       {loading ? (
         <Box

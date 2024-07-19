@@ -11,6 +11,7 @@ import {
   ModalOverlay,
   useDisclosure,
   Button,
+  Stack,
 } from "@chakra-ui/react";
 import React from "react";
 import { Link, NavLink, Path } from "react-router-dom";
@@ -20,6 +21,11 @@ import topupcliqImg from "../../assets/topupcliq.png";
 import codesquad from "../../assets/codesquad_llc.png";
 import Jekinraa from "../../assets/jlogo.png";
 import JekinraaAdmin from "../../assets/jekinraa_admin.png";
+import JekinraaMobile from "../../assets/jekinraa_Mobile.jpg";
+import zouseMobile from "../../assets/zouseMobile.jpg"
+import Liams from "../../assets/Liams.png"
+import liams from "../../assets/liams prod details.png"
+import topupMobile from "../../assets/topupMobile.jpg"
 
 interface Props {
   description: string;
@@ -43,6 +49,7 @@ type modalProps = {
 
 const projects = [
   {
+
     projName: "TopupCliq",
     companyName: "Codesquad LLC",
     image: topupcliqImg,
@@ -65,19 +72,46 @@ const projects = [
     projName: "Jekinraa Admin Panel",
     companyName: "Jekinraa Limited",
     image: JekinraaAdmin,
-    link: "https://ccbnaija.com",
+    link: "https://Jekinraa.com",
     companyLogo: Jekinraa,
     description: "",  
     companyLink: "",
   },
   {
-    projName: "Parrot news",
-    companyName: "Parrot",
-    image: JekinraaAdmin,
-    link: "#",
+    projName: "Jekinraa Mobile App",
+    companyName: "Jenkiraa limited",
+    image: JekinraaMobile,
+    link: "http://play.google.com/store/apps/detail?id=com.jenkinraaapp",
     companyLogo: Jekinraa,
     description: "",
-    companyLink: "",
+    companyLink: "https://Jekinraa.com",
+  },
+  {
+    projName: "Zouse Mobile App",
+    companyName: "Codesquad LLC",
+    image: zouseMobile,
+    link: "http://play.google.com/store/apps/detail?id=com.zouse.codesquad",
+    companyLogo: codesquad,
+    description: "",
+    companyLink: "https://www.codesquad.co",
+  },
+  {
+    projName: "Liams E-Shop",
+    companyName: "Liams",
+    image: liams,
+    link: "https://www.liams.shop",
+    companyLogo: Liams,
+    description: "",
+    companyLink: "https://liam.shop",
+  },
+  {
+    projName: "Topupbox Mobile",
+    companyName: "Codesquad LLC",
+    image: topupMobile,
+    link: "http://play.google.com/store/apps/detail?id=com.topupbox",
+    companyLogo: codesquad,
+    description: "",
+    companyLink: "https://liam.shop",
   },
 ];
 
@@ -94,7 +128,7 @@ const index = (): React.ReactNode => {
       <Flex
         mt="2rem"
         flexWrap="wrap"
-        gap="1.5rem"
+        gap={{base:"1.5rem",md: "1.7%",lg:"1.5rem"}}
         flexDir={{ base: "column", md: "row" }}
       >
         {projects.map((item, idx) => {
@@ -126,7 +160,7 @@ const Project = ({
 }: Props) => {
   return (
     <Box
-      width={{ base: "100%", md: "30%" }}
+      width={{ base: "100%", md: "48.3%", lg:"30%" }}
       shadow="md"
       background="rgba(0, 0, 0, 0.5)"
       display="flex"
@@ -140,7 +174,17 @@ const Project = ({
         display="flex"
         flexDir="column"
       >
-        <Image src={image} alt={projName} width="100%" flex={1} height="95%" />
+        {
+          projName.includes("Mobile")?(
+            <Stack align={"center"} justifyContent={"center"} bg="gray.100" h="90%" w="100%" >
+              <Image src={image} alt={projName} width="40%" flex={1} height="100%" />
+            </Stack>
+          ):(
+
+
+            <Image src={image} alt={projName} width="100%" flex={1} height="95%" />
+          )
+        }
         <Box as={Link} fontWeight={600} my="1rem" to={link} width="fit-content">
           {projName}
         </Box>
